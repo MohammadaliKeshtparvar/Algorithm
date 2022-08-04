@@ -19,10 +19,7 @@ void sort(int a[], int size){
     }
 }
 
-void subset(int arr[], int data[], int start, int end, int index, int r)
-
-{
-
+void subset(int arr[], int data[], int start, int end, int index, int r){
     int j, i;
 
     if (index == r) {
@@ -38,9 +35,7 @@ void subset(int arr[], int data[], int start, int end, int index, int r)
 
     }
     sort(arr, r);
-    for (i = start; i <= end && end - i + 1 >= r - index; i++)
-
-    {
+    for (i = start; i <= end && end - i + 1 >= r - index; i++){
 
         data[index] = arr[i];
 
@@ -53,9 +48,7 @@ void subset(int arr[], int data[], int start, int end, int index, int r)
 
 
 
-void printsubset(int arr[], int n, int r)
-
-{
+void printsubset(int arr[], int n, int r){
 
     int data[r];
     //sort(data, r);
@@ -64,10 +57,8 @@ void printsubset(int arr[], int n, int r)
 
 }
 
-int main()
-{
+int main(){
     int arr[20], n, i;
-
 
     scanf("%d", &n);
 
@@ -78,7 +69,6 @@ int main()
     for(int i=0; i<=n; i++){
         printsubset(arr, n, i);
     }
-
 
     return 0;
 
